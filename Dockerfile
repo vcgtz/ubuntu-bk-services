@@ -12,7 +12,8 @@ RUN apt update && apt -y upgrade
 # Install Dependencies
 RUN ln -snf /usr/share/zoneinfo/$TIME_ZONE /etc/localtime && echo $TIME_ZONE > /etc/timezone
 RUN apt -y install sudo python3 python3.10-venv python3-pip git curl libmagic1 libmagickwand-dev libnss3 libatk1.0-0 \
-  libatk-bridge2.0-0 libdrm2 libxkbcommon-x11-0 libxcomposite-dev libxdamage1 libxrandr2 libgbm-dev libasound2
+  libatk-bridge2.0-0 libdrm2 libxkbcommon-x11-0 libxcomposite-dev libxdamage1 libxrandr2 libgbm-dev libasound2 \
+  chromium-browser
 
 # Install Node 18
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
